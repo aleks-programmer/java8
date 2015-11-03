@@ -1,5 +1,5 @@
-/**
- * Created by aleks on 25.09.15.
- */
-public interface AnotherTimeClient {
+import java.time.ZonedDateTime;
+
+public interface AnotherTimeClient extends TimeClient {
+    ZonedDateTime getZonedDateTime(String zoneString);
 }

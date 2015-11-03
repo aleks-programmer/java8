@@ -1,5 +1,15 @@
-/**
- * Created by aleks on 25.09.15.
- */
-public interface HandleInvalidTimeZoneClient {
+import java.time.DateTimeException;
+import java.time.ZoneId;
+import java.time.ZonedDateTime;
+
+public interface HandleInvalidTimeZoneClient extends TimeClient {
+    default ZonedDateTime getZonedDateTime(String zoneString) {
+        try {
+            return ZonedDateTime.of(getLocalDateTime(), ZoneId.of(zoneString));
+        } catch (DateTimeException e) {
+            System.err.println("Invalid zone ID: " + zoneString +
+                    "; using the default time zone instead.");
+            return ZonedDateTime.of(getLocalDateTime(),ZoneId.systemDefault());
+        }
+    }
 }
