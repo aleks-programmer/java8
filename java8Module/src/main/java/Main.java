@@ -7,13 +7,13 @@ import java.util.function.Predicate;
 public class Main {
     public static void main(String[] args) {
         // generic method invocation
-        Pair<Integer, String> p1 = new Pair<>(1, "apple");
-        Pair<Integer, String> p2 = new Pair<>(2, "apple");
-        boolean same = Util.compare(p1, p2);
-        System.out.println("same: " + same);
-
+//        Pair<Integer, String> p1 = new Pair<>(1, "apple");
+//        Pair<Integer, String> p2 = new Pair<>(2, "apple");
+//        boolean same = Util.compare(p1, p2);
+//        System.out.println("same: " + same);
+//
         List<Person> roster = Collections.singletonList(new Person("Alex", Person.Sex.MALE, 25, "aleks@aleks.ru"));
-        MyClass<Integer> myClass = new MyClass<>("");
+//        MyClass<Integer> myClass = new MyClass<>("");
         //printPersonsOlderThan(Collections.singletonList(new Person("Alex", Person.Sex.MALE, 25)), 25);
 
         //
@@ -54,7 +54,7 @@ public class Main {
 //                p -> p.getEmailAddress(),
 //                email -> System.out.println(email)
 //        );
-
+        testMethod4();
         ;
 
 //        TimeClient myTimeClient = new SimpleTimeClient();
@@ -64,7 +64,7 @@ public class Main {
 //        System.out.println(returnForMain(new Person("Alex", null, 25,"a@a.ru")));
 
         /* Target Types */
-        processStringList(Collections.emptyList());
+       // processStringList(Collections.emptyList());
     }
 
     static void processStringList(List<String> stringList) {
@@ -177,6 +177,15 @@ public class Main {
     public static void testMethod3() {
         String[] s = {"111", "222", "333"};
         Arrays.stream(s);
+    }
+    public static void testMethod4() {
+        List<Integer> list = new ArrayList<>();
+        list.add(1);
+        Iterator it = list.iterator();
+        while (it.hasNext()) {
+            if(!it.next().equals(1)) break;
+            if(it.hasNext()) System.out.println("OK!");
+        }
     }
 
     public static <T> Predicate<T> chain (Function<T,Predicate<T>> mapFunction, T[] args) {
