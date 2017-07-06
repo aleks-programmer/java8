@@ -1,3 +1,5 @@
+package java8_features;
+
 /**
  * Type Inference
  */
@@ -13,7 +15,7 @@ public class BoxDemo {
         int counter = 0;
         for (Box<U> box: boxes) {
             U boxContents = box.get();
-            System.out.println("Box #" + counter + " contains [" +
+            System.out.println("java8_features.Box #" + counter + " contains [" +
                     boxContents.toString() + "]");
             counter++;
         }
@@ -26,5 +28,12 @@ public class BoxDemo {
         BoxDemo.addBox("2", listOfIntegerBoxes);
         BoxDemo.addBox("3", listOfIntegerBoxes);
         BoxDemo.outputBoxes(listOfIntegerBoxes);
+
+        java.util.ArrayList<Box<Integer>> listOfIntegerBoxes2 =
+                new java.util.ArrayList<>();
+        BoxDemo.addBox(4, listOfIntegerBoxes2);
+        BoxDemo.addBox(5, listOfIntegerBoxes2);
+        BoxDemo.addBox(6, listOfIntegerBoxes2);
+        BoxDemo.outputBoxes(listOfIntegerBoxes2);
     }
 }

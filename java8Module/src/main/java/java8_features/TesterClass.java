@@ -1,3 +1,5 @@
+package java8_features;
+
 /**
  * Created by aleks on 29.10.15.
  */

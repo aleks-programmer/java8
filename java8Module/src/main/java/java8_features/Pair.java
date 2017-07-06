@@ -1,3 +1,5 @@
+package java8_features;
+
 public class Pair<K, V> {
 
     private K key;

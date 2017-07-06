@@ -1,3 +1,5 @@
+package java8_features;
+
 import java.util.*;
 import java.util.function.Consumer;
 import java.util.function.Function;
@@ -7,61 +9,61 @@ import java.util.function.Predicate;
 public class Main {
     public static void main(String[] args) {
         // generic method invocation
-//        Pair<Integer, String> p1 = new Pair<>(1, "apple");
-//        Pair<Integer, String> p2 = new Pair<>(2, "apple");
-//        boolean same = Util.compare(p1, p2);
+//        java8_features.Pair<Integer, String> p1 = new java8_features.Pair<>(1, "apple");
+//        java8_features.Pair<Integer, String> p2 = new java8_features.Pair<>(2, "apple");
+//        boolean same = java8_features.Util.compare(p1, p2);
 //        System.out.println("same: " + same);
 //
-        List<Person> roster = Collections.singletonList(new Person("Alex", Person.Sex.MALE, 25, "aleks@aleks.ru"));
-//        MyClass<Integer> myClass = new MyClass<>("");
-        //printPersonsOlderThan(Collections.singletonList(new Person("Alex", Person.Sex.MALE, 25)), 25);
+//        List<java8_features.Person> roster = Collections.singletonList(new java8_features.Person("Alex", java8_features.Person.Sex.MALE, 25, "aleks@aleks.ru"));
+//        java8_features.MyClass<Integer> myClass = new java8_features.MyClass<>("");
+//        printPersonsOlderThan(Collections.singletonList(new java8_features.Person("Alex", java8_features.Person.Sex.MALE, 25, "aleks@aleks.ru")), 25);
 
-        //
-        //printPersons(
-        //        Collections.singletonList(new Person("Alex", Person.Sex.MALE, 25)), new CheckPersonEligibleForSelectiveService());
 
 //        printPersons(
-//                Collections.singletonList(new Person("Alex", Person.Sex.MALE, 25)),
-//                new CheckPerson() {
-//                    public boolean test(Person p) {
-//                        return p.getGender() == Person.Sex.MALE
-//                                && p.getAge() >= 18
-//                                && p.getAge() <= 25;
-//                    }
-//                }
-//        );
+//                Collections.singletonList(new java8_features.Person("Alex", java8_features.Person.Sex.MALE, 25, "aleks@aleks.ru")), new java8_features.CheckPersonEligibleForSelectiveService());
+
+        printPersons(
+                Collections.singletonList(new Person("Alex", Person.Sex.MALE, 25, "aleks@aleks.ru")),
+                new CheckPerson() {
+                    public boolean test(Person p) {
+                        return p.getGender() == Person.Sex.MALE
+                                && p.getAge() >= 18
+                                && p.getAge() <= 25;
+                    }
+                }
+        );
 
 //        printPersons(
-//                Collections.singletonList(new Person("Alex", Person.Sex.MALE, 25)),
-//                (Person p) -> p.getGender() == Person.Sex.MALE
+//                Collections.singletonList(new java8_features.Person("Alex", java8_features.Person.Sex.MALE, 25)),
+//                (java8_features.Person p) -> p.getGender() == java8_features.Person.Sex.MALE
 //                        && p.getAge() >= 18
 //                        && p.getAge() <= 25
 //        );
 //        printPersonsWithPredicate( roster,
-//                p -> p.getGender() == Person.Sex.MALE
+//                p -> p.getGender() == java8_features.Person.Sex.MALE
 //                        && p.getAge() >= 18
 //                        && p.getAge() <= 25);
 
-//        printPersons(roster, p -> p.getGender() == Person.Sex.MALE
+//        printPersons(roster, p -> p.getGender() == java8_features.Person.Sex.MALE
 //                && p.getAge() >= 18
 //                && p.getAge() <= 25, p -> p.printPerson());
 
 //        processElements(
 //                roster,
-//                p -> p.getGender() == Person.Sex.MALE
+//                p -> p.getGender() == java8_features.Person.Sex.MALE
 //                        && p.getAge() >= 18
 //                        && p.getAge() <= 25,
 //                p -> p.getEmailAddress(),
 //                email -> System.out.println(email)
 //        );
-        testMethod4();
+//        testMethod2();
         ;
 
-//        TimeClient myTimeClient = new SimpleTimeClient();
+//        java8_features.TimeClient myTimeClient = new java8_features.SimpleTimeClient();
 //        System.out.println("Current time: " + myTimeClient.toString());
 //        System.out.println("Time in Togliatti: " +
 //                myTimeClient.getZonedDateTime("Blah blah").toString());
-//        System.out.println(returnForMain(new Person("Alex", null, 25,"a@a.ru")));
+//        System.out.println(returnForMain(new java8_features.Person("Alex", null, 25,"a@a.ru")));
 
         /* Target Types */
        // processStringList(Collections.emptyList());

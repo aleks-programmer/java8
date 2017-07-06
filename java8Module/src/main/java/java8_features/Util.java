@@ -1,3 +1,4 @@
+package java8_features;
 
 /**
  * Generic methods
