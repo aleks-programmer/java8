@@ -21,6 +21,6 @@ public class SimpleGraphic implements Graphic {
 
     @Override
     public void paint() {
-        System.out.println("run pain operation");
+        System.out.println("run paint operation");
     }
 }
