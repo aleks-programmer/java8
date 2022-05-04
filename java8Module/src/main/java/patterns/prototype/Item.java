@@ -9,8 +9,8 @@ public abstract class Item {
         Item clonedItem = null;
         try {
             clonedItem = (Item) super.clone();
-            clonedItem.setPrice(price);
-            clonedItem.setTitle(title);
+//            clonedItem.setPrice(price);
+//            clonedItem.setTitle(title);
         } catch (CloneNotSupportedException e) {
             e.printStackTrace();
         }

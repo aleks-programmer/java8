@@ -23,6 +23,10 @@ public class Person implements Cloneable {
     Sex gender;
     String emailAddress;
 
+    public String getName() {
+        return name;
+    }
+
     public int getAge() {
         return age;
         // ...
@@ -57,5 +61,21 @@ public class Person implements Cloneable {
     @Override
     protected Object clone() throws CloneNotSupportedException {
         return super.clone();
+    }
+
+    @Override
+    public String toString() {
+        return "Person{" +
+                "name='" + name + '\'' +
+                ", age=" + age +
+                ", birthday=" + birthday +
+                ", gender=" + gender +
+                ", emailAddress='" + emailAddress + '\'' +
+                '}';
+    }
+
+    @Override
+    protected void finalize() throws Throwable {
+        super.finalize();
     }
 }

@@ -7,7 +7,7 @@ public class TesterClass {
     public static void testExceptions() throws Exception {
 
             String a = "";
-            Tester1.test3();
+//            Tester1.test3();
 
     }
     public static void main(String[] args) throws Exception {
