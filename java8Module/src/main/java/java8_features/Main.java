@@ -20,7 +20,6 @@ import static java.util.concurrent.TimeUnit.*;
 
 public class Main {
     public static void main(String[] args) throws InterruptedException {
-        ConcurrentLinkedDeque<String> queue;
         // generic method invocation
 //        java8_features.Pair<Integer, String> p1 = new java8_features.Pair<>(1, "apple");
 //        java8_features.Pair<Integer, String> p2 = new java8_features.Pair<>(2, "apple");
